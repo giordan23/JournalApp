@@ -1,17 +1,19 @@
-import React from 'react'
-import { Route, Router } from 'react-router'
-import { JournalScreeen } from '../components/journal/JournalScreeen'
-import { AuthRouter } from './AuthRouter'
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { JournalScreen } from '../components/journal/JournalScreen';
+import { AuthRouter } from './AuthRouter';
 
 export const AppRouter = () => {
     return (
-        <div>
             <Router>
-                <Switch>
-                    <Route path='/auth' component={ AuthRouter }></Route>
-                    <Route path='/' component={ JournalScreeen }></Route>
-                </Switch>
-        </Router>
-        </div>
+                <div >
+                    <Switch>
+                        <Route path='/auth' component={ AuthRouter } />
+                        <Route exact path='/' component={ JournalScreen } />
+                    </Switch>
+                </div>
+            </Router>
+            // <JournalScreen />
+            // <h1>HoladesdeAppRouter</h1>
     )
 }
