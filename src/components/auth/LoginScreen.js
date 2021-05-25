@@ -25,7 +25,6 @@ export const LoginScreen = () => {
                 >
                     Login
                 </button>
-                <hr></hr>
                 <div className='auth__social-networks'>
                     <p>
                         Login con Redes Sociales
